@@ -1,0 +1,18 @@
+class Solution:
+    def isAnagram(self, s: str, t: str) -> bool:
+        
+        freq_s = defaultdict(int)
+        freq_t = defaultdict(int)
+
+        for char in s:
+            freq_s[char] += 1
+
+        for char in t:
+            freq_t[char] += 1
+
+        if freq_s == freq_t:
+            return True
+        return False
+
+
+        
